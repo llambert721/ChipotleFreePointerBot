@@ -2,6 +2,8 @@
 Python bot that scans Chipotle twitter account for #ChipotleFreePointer codes and text codes automatically through imessage on mac <br />
 Created by EvilWumpus
 
+![Capture](https://github.com/EvilWumpus/ChipotleFreePointerBot/assets/96006583/c32de27d-c03b-4ea3-a182-cd83c1d70e8a)
+
 ## Requirements
 - Python 3.8+
 - MacOS and imessage enabled
@@ -11,7 +13,6 @@ Created by EvilWumpus
 ## Installation
 - WORKS ON MAC ONLY!
 - Clone this repository using `git clone https://github.com/EvilWumpus/ChipotleFreePointerBot.git`
-  - Or download from [releases](https://github.com/EvilWumpus/ChipotleFreePointerBot/releases)
 - Install the chrome webdriver from [here](https://chromedriver.chromium.org/downloads) for your current version. [Video guide for driver install](https://youtu.be/WnWQgUerR0c?t=108)
 - Make sure you are logged into imessage
 - Run `pip install -r requirements.txt`
