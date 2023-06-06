@@ -56,7 +56,6 @@ def countdown(i = 25):
         i -= 1
         time.sleep(1)
     os.system("clear")
-    
 
 def send_text(code: str) -> str:
     imessage.send("888222", code)
