@@ -7,7 +7,7 @@ Created by EvilWumpus
 ## Requirements
 - Python 3.8+
 - MacOS and imessage enabled
-- Google Chrome must be installed
+- Google Chrome and Chrome driver must be installed
 - System Integrity Protection MUST be disabled
 
 ## Installation
