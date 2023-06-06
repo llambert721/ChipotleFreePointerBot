@@ -1,6 +1,7 @@
 import sys
 import time
 import os
+from termcolor import colored
 import undetected_chromedriver as uc
 from py_imessage import imessage
 from selenium.webdriver.support.wait import WebDriverWait
@@ -44,14 +45,14 @@ def loop_twitter_page(driver: uc.Chrome, TWEET_XPATH: str, last_tweet: str) -> s
             resp, code_found = clean_text(tweet_element.text)
 
             if code_found:
-                print(f"Code found at {get_current_time()}")
+                print(f"Code found at {get_current_time()} ({resp})")
                 return resp
             else:
                 print(resp)
 
 def countdown(i = 25):
     for _ in range(i):
-        print(f"Restarting in {i} seconds, CTRL + V to cancel ", end='\r')
+        print(f"Restarting in {i} seconds, CTRL + C to cancel ", end='\r')
         sys.stdout.flush()
         i -= 1
         time.sleep(1)
@@ -60,3 +61,16 @@ def countdown(i = 25):
 def send_text(code: str) -> str:
     imessage.send("888222", code)
     return f"Text sent at {get_current_time()}! ({code})\nPlease check your phone"
+
+def title():
+    title_ascii = '''
+   ____ _     _             _   _        _____ ____  
+  / ___| |__ (_)_ __   ___ | |_| | ___  |  ___|  _ \ 
+ | |   | '_ \| | '_ \ / _ \| __| |/ _ \ | |_  | |_) |
+ | |___| | | | | |_) | (_) | |_| |  __/ |  _| |  __/ 
+  \____|_| |_|_| .__/ \___/ \__|_|\___| |_|   |_|    
+               |_|                                   
+
+https://github.com/EvilWumpus
+'''
+    print(colored(title_ascii, "green"))
